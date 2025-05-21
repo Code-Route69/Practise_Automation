@@ -17,7 +17,7 @@ public class BaseClass {
 
 	@BeforeTest
 	public void testStart() {
-		switch (System.getProperty("browser")) {
+		switch (System.getProperty("browser","Browser Not initiated")) {
 		case "chrome" -> Reporter.log("Test is Starting in chrome browser", true);
 		case "firefox" -> Reporter.log("Test is Starting in firefox browser", true);
 		case "msedge" -> Reporter.log("Test is Starting in msedge browser", true);
@@ -38,7 +38,7 @@ public class BaseClass {
 
 	@AfterTest
 	public void testEnd() {
-		switch (System.getProperty("browser")) {
+		switch (System.getProperty("browser","Browser Not initiated")) {
 		case "chrome" -> Reporter.log("Test is ending in chrome browser", true);
 		case "firefox" -> Reporter.log("Test is ending in firefox browser", true);
 		case "msedge" -> Reporter.log("Test is ending in msedge browser", true);
